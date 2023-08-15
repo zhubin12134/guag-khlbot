@@ -50,7 +50,7 @@ class PlayHandler:
             
             while True:
                 # 判断当前歌曲是否推流结束
-                if settings.cut:
+                if (p.returncode is not None) or settings.cut:
                     await asyncio.create_subprocess_shell(f"pkill -TERM -P {p.pid}", 
                                 stdout=subprocess.DEVNULL,
                                 stderr=subprocess.DEVNULL)
