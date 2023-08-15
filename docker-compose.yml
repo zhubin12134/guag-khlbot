@@ -1,0 +1,10 @@
+version: '3'
+services:
+  mykhlbot:
+    container_name: guag-khlbot
+    image: guag-khlbot
+    restart: always
+    volumes:
+      - music:/app/music
+      - MyKhlBot/log:/app/log
+      - .env:/app/.env
