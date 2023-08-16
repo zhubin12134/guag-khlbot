@@ -5,6 +5,6 @@ services:
     image: guag-khlbot
     restart: always
     volumes:
-      - music:/app/music
-      - MyKhlBot/log:/app/log
+      - ./music:/app/music
+      - ./MyKhlBot/log:/app/log
       - .env:/app/.env
