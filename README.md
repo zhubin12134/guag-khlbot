@@ -2,6 +2,7 @@
 
 
 ![github stars](https://img.shields.io/github/stars/zhubin12134/guag-khlbot?style=social)
+
 Kyouka is a simple and powerful music bot for [KOOK](https://www.kookapp.cn/), it is easy to use and develop.
 
 
@@ -142,3 +143,5 @@ todo:
 
 ## 致谢
 本项目参考XCWQW1的思路 [kookbot2](https://github.com/XCWQW1/kookbot2)
+
+播放连接为hank999的[khl-voice-API](https://github.com/Knoooooooow/khl-voice-API.git)
