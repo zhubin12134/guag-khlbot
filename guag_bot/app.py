@@ -57,6 +57,7 @@ async def test4(msg: Messags, music: str):
 
 @command(name="本地")
 async def local_play(msg: Messags, music: str):
+    music = music.replace("\\", "")
     if not os.path.exists(os.path.join(settings.music_path, music)):
         await msg.send_channel_message("本地没有这首歌")
     else:
@@ -77,7 +78,7 @@ async def play_list(msg: Messags):
 @command(name="本地列表")
 async def local_list(msg: Messags):
     local_musc_list = filter(lambda file: (not file.startswith("_")) and (file.endswith(".mp3")), os.listdir(settings.music_path))
-    list2str = '\n'.join(list(local_musc_list))
+    list2str = '\n'.join(list(local_musc_list)[:15])
     await msg.send_channel_message(list2str)
 
 
@@ -95,7 +96,7 @@ async def cut(msg: Messags):
 @command(name="歌单")
 async def playlist(msg: Messags, sheet):
     if sheet == "阿态":
-        tail_sheet = os.listdir(settings.music_path)
+        tail_sheet = list(filter(lambda file: file.endswith(".mp3"), os.listdir(settings.music_path)))
         random.shuffle(tail_sheet)
         for music_name in tail_sheet:
             settings.music_list.append(Musc(music_name))
@@ -159,7 +160,8 @@ async def help(msg: Messags):
 5. 播放服务器上的歌曲,需要先绑定语音频道： +本地 歌名
 6. 切歌: +切歌
 7. 列表: +播放列表
-8. ping: +ping
+8. 查看本地列表: +本地列表
+9. ping: +ping
 todo:
 各大主流音乐平台播放
 """

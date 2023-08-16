@@ -3,7 +3,7 @@ from typing import List, Dict
 
 
 class CommonSettings(BaseSettings):
-    debug: bool = True
+    debug: bool = False
 
     token_type: str = 'Bot'
     token: str = ""
