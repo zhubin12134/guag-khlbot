@@ -54,10 +54,12 @@ class PlayHandler:
                     await asyncio.create_subprocess_shell(f"pkill -TERM -P {p.pid}", 
                                 stdout=subprocess.DEVNULL,
                                 stderr=subprocess.DEVNULL)
-                    
+
+                    await p.wait()
                     settings.cut = False
                     if settings.music_play:
                         settings.music_play.pop(0)
+                    await asyncio.sleep(5)
                     break
 
                 await asyncio.sleep(0.1)
