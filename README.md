@@ -145,3 +145,5 @@ todo:
 本项目参考XCWQW1的思路 [kookbot2](https://github.com/XCWQW1/kookbot2)
 
 播放连接为hank999的[khl-voice-API](https://github.com/Knoooooooow/khl-voice-API.git)
+
+联系作者: [戳这里](https://kook.top/94E6PE)
