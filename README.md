@@ -3,7 +3,6 @@
 
 ![github stars](https://img.shields.io/github/stars/zhubin12134/guag-khlbot?style=social)
 
-Kyouka is a simple and powerful music bot for [KOOK](https://www.kookapp.cn/), it is easy to use and develop.
 
 
 ## Contents
